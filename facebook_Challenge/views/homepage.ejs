@@ -1,0 +1,41 @@
+<%- include('./components/header')%>
+
+    <%- include('./components/navbar')%>
+     <h3 id="addpost_text">Add post</h3>
+     <form method="POST" action="/new/post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" name="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Message</label>
+        <input type="text" name="Message"  class="form-control" id="exampleInputPassword1">
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+    <% if(result.length > 0){%> 
+        <% result.forEach (element => { %>             
+  <div class="row">
+    <div class="col s12 m6" >
+      <div class="card blue-grey darken-1" id="cards" >
+        <div class="card-content white-text" >
+          <span class="card-title"><%= element.Name %></span>
+          <p><%= element.Message %></p>
+        </div>
+        <div class="card-action"><a id="seeMore" href=/feed/<%= element._id %> </a>see moer</div>
+        <p id="createddate"><%= element.createdAt %></p>
+      </div>
+    </div>
+  </div>
+            <%})%>
+        <%} else {%> 
+           <h3 class="noRecord">  there are no records </h3>
+           <i class="large material-icons" id="icon">sentiment_very_dissatisfied</i>
+           <!-- <img src="/images/imoij01.png" id="img01" alt="img"> -->
+            <%}%>
+
+
+<%- include('./components/footer')%>
+

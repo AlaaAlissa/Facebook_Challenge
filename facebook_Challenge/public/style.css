@@ -1,0 +1,46 @@
+
+body{
+    background-color: rgb(198, 236, 243);
+}
+
+form{
+    margin: 20px;
+}
+
+#icon{
+    width: 100px;
+    height: 100px;
+    margin-left: 10%;
+}
+.noRecord{
+    margin: 5%;
+}
+
+.brand-logo{
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+#emailHelp{
+color:black !important;
+background-color: red;
+width: fit-content;
+height: fit-content;
+font-size: medium;
+}
+
+#navbar{
+    background-color: blue;
+}
+
+#createddate{
+    margin-left: 10%;
+    color: black;
+}
+#cards{
+    background-color: rgb(0, 0, 253) !important;
+}
+#addpost_text{
+    margin: 5px;
+    font-size: medium;
+}
